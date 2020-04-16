@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+  before_action :allowed?, only: [:new]
 
   # GET /posts
   # GET /posts.json
@@ -61,6 +61,12 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def allowed?
+    @current_user = User.find_by(remember_token: cookies[:remember_me])
+    redirect_to root_url unless @current_user
+  end
+
   # Only allow a list of trusted parameters through.
   def post_params
     params.require(:post).permit(:title, :body, :user_id)
