@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     p @user.errors
   
     if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
+      redirect_to root_path, notice: 'User was successfully created.'
     else
       render :new 
     end
@@ -62,9 +62,9 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+    # def set_user
+    #   @user = User.find(params[:id])
+    # end
 
     # Only allow a list of trusted parameters through.
     def user_params
