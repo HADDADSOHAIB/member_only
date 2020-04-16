@@ -25,9 +25,14 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    p @user.errors
 
     if @user.save
+
+      remember_token = Digest::SHA256.hexdigest user_params[:email]
+
+      cookies.permanent[:remember_me] = remember_token
+      @user.update_attribute('remember_token', remember_token)
+
       redirect_to root_path, notice: 'User was successfully created.'
     else
       render :new

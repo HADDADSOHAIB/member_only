@@ -8,7 +8,7 @@ class SessionController < ApplicationController
 
       flash[:notice] = "Welcome #{user.email} back, enjoy your time."
       remember_token = Digest::SHA256.hexdigest params[:email]
-      p remember_token
+
       cookies.permanent[:remember_me] = remember_token
       user.update_attribute('remember_token', remember_token)
 
