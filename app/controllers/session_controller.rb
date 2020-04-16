@@ -7,11 +7,7 @@ class SessionController < ApplicationController
     if user&.authenticate(params[:password])
 
       flash[:notice] = "Welcome #{user.email} back, enjoy your time."
-      remember_token = Digest::SHA256.hexdigest params[:email]
-
-      cookies.permanent[:remember_me] = remember_token
-      user.update_attribute('remember_token', remember_token)
-
+      cookies.permanent[:remember_me] = user.create_token
       redirect_to root_path
     else
       flash.now[:alert] = 'The provided credentials are not correct'
@@ -25,3 +21,4 @@ class SessionController < ApplicationController
     redirect_to root_path
   end
 end
+
