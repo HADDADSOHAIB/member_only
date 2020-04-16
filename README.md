@@ -1,24 +1,66 @@
-# README
+# Member Only!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project builds a Rails application for an exclusive clubhouse where members can write embarrassing posts about non-members. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 
-Things you may want to cover:
+# How to use the app
 
-* Ruby version
+- Only signed in users are able to read who created the post.
 
-* System dependencies
+# Live Version
 
-* Configuration
+- [Live Application Access](https://powerful-garden-93253.herokuapp.com/)
 
-* Database creation
+## Environment set up requirements
 
-* Database initialization
+To run this project, you need ruby installed in your environment
+Run the following command:
 
-* How to run the test suite
+```
+$ ruby -v
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+You should have a result similar to this:
+s
+```
+ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
+```
 
-* Deployment instructions
+If you don't get that result, follow this [link](https://www.ruby-lang.org/en/documentation/installation/) and install Ruby in your local environment.
 
-* ...
+### Setup
+- Clone this repository in your local environment
+- Located on the root of repository execute 
+
+```bundle install``` 
+ 
+This action will install all the required dependencies. 
+
+
+## Built With
+
+- Ruby
+- Ruby on Rails
+
+## Authors
+
+👤 **HADDAD SOHAIB**
+
+- Github: [@HADDADSOHAIB](https://github.com/HADDADSOHAIB)
+- Twitter: [@HaddadSohaib](https://twitter.com/HaddadSohaib)
+- Linkedin: [linkedin](https://www.linkedin.com/in/sohaibhaddad/)
+
+👤 Carlos Anriquez
+
+- Github: [@canriquez](https://github.com/canriquez)
+- Twitter: [@cranriquez](https://twitter.com/cranriquez)
+- Linkedin: [linkedin](https://www.linkedin.com/in/carlosanriquez/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!

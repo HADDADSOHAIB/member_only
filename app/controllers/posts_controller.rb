@@ -20,7 +20,6 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit; end
 
- 
   def create
     @current_user = User.find_by(remember_token: cookies[:remember_me])
     @post = @current_user.posts.build(post_params)
