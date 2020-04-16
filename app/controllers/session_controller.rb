@@ -5,9 +5,8 @@ class SessionController < ApplicationController
     user = User.find_by(email: params[:email])
 
     if user&.authenticate(params[:password])
-
       flash[:notice] = "Welcome #{user.email} back, enjoy your time."
-      cookies.permanent[:remember_me] = user.create_token
+      sign_in(user)
       redirect_to root_path
     else
       flash.now[:alert] = 'The provided credentials are not correct'
