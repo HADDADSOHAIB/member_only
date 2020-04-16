@@ -8,7 +8,7 @@ This project builds a Rails application for an exclusive clubhouse where members
 
 # Live Version
 
-- [Live Application Access](https://powerful-garden-93253.herokuapp.com/)
+- [Live Application Access](https://afternoon-ridge-15468.herokuapp.com/
 
 ## Environment set up requirements
 
